@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var Stack = function () {
+    var items = []
+    this.push = function (el) {
+      items.push(el)
+    }
+    this.pop = function () {
+      return items.pop()
+    }
+    // 检查栈顶元素
+    this.peek = function () {
+      return items[items.length - 1]
+    }
+    // 检查是否为空
+    this.isEmpty = function () {
+      return items.length === 0
+    }
+    // 清除栈
+    this.clear = function () {
+      items = []
+    }
+    // 获取栈长度
+    this.size = function () {
+      return items.length
+    }
+    this.getItems = function () {
+      return items
+    }
+  }
+
+  var stack = new Stack()
+  var tenToTwo = function (number) {
+    var str = ''
+    while (number > 0) {
+      var yushu = number % 2
+      stack.push(yushu)
+      number = Math.floor(number / 2)
+    }
+    while (!stack.isEmpty()) {
+      str += stack.pop()
+    }
+    return str
+  }
+</script>
+</body>
+</html>

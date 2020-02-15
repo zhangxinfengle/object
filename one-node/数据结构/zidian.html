@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var Dection=function () {
+      var items={};
+      this.has=function(key){
+          return key in items
+      };
+      this.set=function (key,value) {
+          items[key]=value;
+      };
+      this.delete=function(key){
+          if(this.has(key)){
+             delete items[key];
+              return true
+          }
+          return false
+      };
+      this.get=function(key){
+          if(this.has(key)){
+              return items[key]
+          }
+          return undefined
+      };
+      this.getItem=function(){
+          return items
+      }
+  };
+  /*var s=new Dection();
+  s.set('aaa',12)
+   s.set('bbb',13)
+   s.set('name','zhouge')
+    console.log(s.get('aaa'))
+  console.log(s.getItem())
+*/
+           var HashTable=function () {
+           var items=[];
+             //散列函数
+             //key>number>items[number]
+            //key=>散列值
+              var loseloseHashCode=function (key) {
+              var hash=0;
+              for(var i=0;i<key.length;i++){
+                      hash+=key[i].charCodeAt();
+              }
+                 hash=hash%37;
+                  return hash;
+             };
+              this.put=function (key,value) {
+                  var position=loseloseHashCode(key);
+                  console.log(position+'-'+value);
+                  items[position]=value
+                  
+              };
+              this.remove=function (key) {
+              return     items[loseloseHashCode(key)]=undefined
+
+              };
+              this.get=function (key) {
+
+                  return  items[loseloseHashCode(key)]
+              };
+              this.getItem=function () {
+                  return items
+              }
+           };
+  var s=new HashTable();
+
+  s.put('zhouge','qq.con');
+  s.put('xioaming','xiaoming.com');
+  s.put('lige','www.con');
+  console.log(s.getItem());
+ console.log(s.get('lige'))
+//散列冲突   不同的key 哈希码是相同的 前一个会被覆盖
+    //方法 1.分离连接    2.线性探查发
+
+  //分离链接
+  //1.链表部分
+  var linkedList=function(){
+      var head=null;
+      var length=0;
+      var Node=function (element) {
+          this.element=element;
+          this.next=null;
+      };
+      //链表接收数据
+
+      this.append=function(element) {
+          var node=new Node(element);
+
+          if(head==null){
+              head=node
+          }else{
+              var current=head;
+              while (current.next) {
+                  current=current.next;
+              }
+              current.next=node;
+              length++}};
+
+      //链表的某一个位置添加元素
+      this.insert=function(position,element){
+          if(position>-1&&position<length){
+              var node=new Node(element);
+              if(position==0){
+                  var current=head;
+                  head=node;
+                  current.next=current;
+
+              }else{
+
+                  var previous=null;
+                  var index=0;
+                  var current=head;
+
+                  while (index<position) {
+                      previous=current;
+                      current=current.next;
+                      index++
+                  }
+                  previous.next=node;
+                  node.next=current;
+              }
+              length++
+
+          }
+
+      };
+      this.removeAt=function(position) {
+          if (position > -1 && position < length) {
+              if (position == 0) {
+                  var current = head;
+                  head = current.next;
+              }
+              else {
+                  var previous = null;
+                  var current = head;
+                  var index = 0;
+                  while (index < position) {
+                      previous = current;
+                      current = current.next;
+                      index++
+
+                  }
+                  previous.next = current.next
+              }
+              length--;
+              return current;
+
+          }
+          return null
+
+      };
+      this.indexof=function (element) {
+          var current=head;
+          var index=0;
+          while (current) {
+
+              if(current.element==element)
+              {
+                  return  index
+              }
+              index++;
+              current=current.next}
+          return -1
+      };
+      this.remove=function(element){
+          return this.removeAt(this.indexof(element))
+      };
+
+
+      this.getHead=function () {
+          return head
+      };
+      this.Isempty=function(){
+          return length==0;
+      }
+      this.size=function(){
+          return length;
+      }
+
+  };
+//2. 正码部分
+     var Hashtable_l=function(){
+               var table=[];
+         var loseloseHashCode=function (key) {
+             var hash=0;
+             for(var i=0;i<key.length;i++){
+                 hash+=key[i].charCodeAt();
+             }
+             hash=hash%37;
+             return hash;
+         };
+         var node=function (key,value) {
+             this.key=key;
+             this.value=value;
+         };
+         this.put=function (key,value) {
+             var position=loseloseHashCode(key);
+             if(table[position]){
+                 table[position].append(new node(key,value))
+             }else{
+                 var l=new linkedList();
+                 table[position]=l;
+                 l.append(new node(key,value))
+
+             }
+
+         };
+         this.get=function (key) {
+             var position=loseloseHashCode(key);
+
+             if(table[position]){
+
+               var current=table[position].getHead();
+
+
+                while (current) {
+
+                   if(current.element.key==key){
+                          return current.element.value
+                   }
+                    current= current.next;
+                }
+           }else{
+               return  undefined
+           }
+         };
+         this.remove=function (key) {
+             var position=loseloseHashCode(key);
+             if(table[position]){
+                 var current=table[position].getHead();
+
+                 if(current.element.key==key){
+                     table[position].remove(current.element);
+
+                     if(table[position].Isempty()){
+                         return undefined
+                     }
+
+                 }
+                 current=current.next
+
+             }else{
+                 return false
+             }
+
+         };
+         this.getTable=function () {
+             return table
+         }
+     };
+     var hl=new Hashtable_l();
+    hl.put('Donnie','Donnie.com');
+    hl.put('Ana','Ana.com');
+  hl.put('aaa','fafafa');
+  hl.remove('aaa')
+  console.log(hl.getTable())
+    /*console.log(hl.get('Donnie'))
+   console.log(hl.getTable()[13].getHead())*/
+ console.log(hl.get('Ana'))
+    //djb2 散列函数
+    var djb2HashCode=function (key) {
+     var hash=5381;
+     for(vari=0;i<key.length;i++){
+         hash=hash*33+key[i].charCodeAt()
+     }
+     return hash%1013
+
+    }
+
+
+</script>
+</body>
+</html>

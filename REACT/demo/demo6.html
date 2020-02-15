@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 对模式进行一种组建式的包装 -->
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById('root')
+        class Button {
+            constructor() {
+                this.state = {
+                    like: true
+                }
+                this.render()
+            }
+            setState(newState) {
+                this.state = {
+                    ...this.state,
+                    ...newState
+                }
+                this.render();
+            }
+            render(){
+                const state = this.state
+                root.innerHTML = `
+                <button type = 'button' onclick="handleClick()" style="color:${state.like?"red":"black"}">${state.like?"已赞":"喜欢"}</button>
+                `
+            }
+        }
+    </script>
+</body>
+
+</html>

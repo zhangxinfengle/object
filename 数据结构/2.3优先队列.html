@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Priority () {
+    var items = []
+
+    function QueueItem (el, pri) {
+      this.el = el
+      this.pri = pri
+    }
+
+    this.enqueue = function (el, pri) {
+      var queueItem = new QueueItem(el, pri)
+      var bl = false
+      for (var i = 0; i < items.length; i++) {
+        if (queueItem.pri > items[i].pri) {
+          items.splice(i, 0, queueItem)
+          bl = true
+          break
+        }
+      }
+      if (!bl) {
+        items.push(queueItem)
+      }
+    }
+    this.getItems = function () {
+      return items
+    }
+  }
+
+  var p = new Priority()
+  p.enqueue('小明', 1)
+  p.enqueue('小红', 2)
+</script>
+</body>
+</html>

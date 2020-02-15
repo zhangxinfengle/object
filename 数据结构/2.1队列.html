@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // 队列是一种先进先出的结构（FIFO）（first-in-first-out）
+  // 队列操作：
+  // 入列 enqueue
+  // 出列 dequeue
+  // 查看列头 front
+  // 查看队列是否为空 isEmpty
+  // 列队长度 size
+
+  /**
+   * 队列构造函数
+   * @constructor
+   */
+  function Queue () {
+    var items = []
+
+    /**
+     * 入列
+     * @param el
+     */
+    this.enqueue = function (el) {
+      items.push(el)
+    }
+
+    /**
+     * 出列
+     * @returns {*}
+     */
+    this.dequeue = function () {
+      return items.shift()
+    }
+
+    /**
+     * 查看队列头
+     * @returns {*}
+     */
+    this.front = function () {
+      return items[0]
+    }
+
+    /**
+     * 查看队列是否为空
+     * @returns {*}
+     */
+    this.isEmpty = function () {
+      return items.length === 0
+    }
+
+    /**
+     * 查看队列大小
+     * @returns {*}
+     */
+    this.size = function () {
+      return items.length
+    }
+
+    /**
+     * 获取当前队列的元素
+     * @returns {Array}
+     */
+    this.getItems = function () {
+      return items
+    }
+  }
+</script>
+</body>
+</html>

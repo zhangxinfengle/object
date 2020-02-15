@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str = "Hello World!";
+			console.log(str);
+			var myComputer = {
+					name :　"computer",
+					brand:"dell",
+					price:4444,
+					app:['qq','wechat','taobao']
+			}
+			var arr = [22,45,78,999];
+			var comList = [
+				{
+					name :　"computer1",
+					brand:"dell",
+					price:4444
+				},{
+					name :　"computer2",
+					brand:"xiaomi",
+					price:4888
+				}
+			];
+			function add(a,b){
+				return a+b;
+			}
+			var fun = function(){
+				console.log(str);
+				return;
+				console.log(1212)
+			}
+			var a = function(){
+				console.log(arguments)
+			}
+			a(1,2,3,4);
+			var Computer = function(price,brand){
+				this.price = price;
+				this.brand = brand;
+				this.start = function(){
+					console.log("开机");
+				}
+			}
+		</script>
+	</body>
+</html>

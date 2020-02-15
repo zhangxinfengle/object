@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.dd{
+				height: 300px;
+				border: solid 1px black;
+			}
+			@media only screen and (max-width:768px ) {
+				.col-small-1{
+					width: 25%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-small-2{
+					width: 50%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-small-3{
+					width: 75%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-small-4{
+					width: 100%;
+					box-sizing: border-box;
+					float: left;
+				}
+			}
+			@media only screen and (min-width: 768px) {
+				.col-big-1{
+					width: 25%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-big-2{
+					width: 50%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-big-3{
+					width: 75%;
+					box-sizing: border-box;
+					float: left;
+				}
+				.col-big-4{
+					width: 100%;
+					box-sizing: border-box;
+					float: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="dd col-big-4 col-small-4">
+			导航栏
+		</div>
+		<div class="dd col-big-3 col-small-4">
+			内容区
+		</div>
+		<div class="dd col-big-1 col-small-4">
+			导航栏
+		</div>
+	</body>
+</html>

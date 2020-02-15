@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var Queue=function() {
+        var item = [];
+        this.enqueue = function (element) {
+            return item.push(element)
+        };
+        this.dequeue = function ()
+        {
+            return item.shift();
+        };
+        this.size=function(){
+            return item.length;
+        };
+        this.font=function(){
+            return item[0];
+        };
+        this.Isempty=function(){
+            return item.length===0
+        }
+    };
+
+    var numers=['a','b','c','d','e','f'];
+
+    var chuanhua=function (nums,n) {
+
+        var q=new Queue();
+        for(var i=0;i<nums.length;i++){
+            q.enqueue(nums[i])
+        }
+        while (q.size()>1) {
+            for(var i=0;i<n-1;i++){
+                q.enqueue(q.dequeue())
+            }
+            var taotai=q.dequeue();
+            console.log('淘汰了'+taotai )
+        }
+       var  vector=q.dequeue();
+        console.log('胜利者是：'+vector)
+    };
+    chuanhua(numers,3);
+
+
+
+    var Priorityqueue=function () {
+        var item=[];
+        var Priority=function (element,priority) {
+           this.element=element;
+           this.priority=priority
+        };
+        this.enqueue=function (element,priority) {
+            var adder=false;
+            var prio=new Priority(element,priority);
+            for (var i=0;i<item.length;i++) {
+
+                if(prio.priority>item[i].priority){
+
+                    item.splice(i,0,prio);
+                    adder=true;
+                    break;
+                }
+            }
+            if(!adder){
+                item.push(prio)
+            }
+
+        };
+
+
+
+
+
+        this.getitem=function () {
+            return item
+        }
+    };
+    var s=new Priorityqueue;
+   s.enqueue('a',7);
+   s.enqueue('b',2);
+     s.enqueue('c',5);
+    s.enqueue('d',3);
+   s.enqueue('e',11);
+    s.enqueue('f',9);
+   s.enqueue('d',10);
+   console.log(JSON.stringify(s.getitem()));
+
+
+
+
+</script>
+
+</body>
+</html>

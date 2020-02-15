@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <p id="error">字数不能超过10字</p>
+    <button id="clearError">x</button>
+    <script>
+        var input=document.getElementById("input");
+        var errorKsg=document.getElementById('error');
+        document.getElementById('clearError').addEventListener('click',function(){
+            setState({
+                error:false
+            })
+        })
+        var state={
+            value:'',
+            error:false
+        }
+        var setState=function(newState){
+            state={
+                ...state,
+                ...newState
+            }
+            render()
+        }
+        var render=function(){
+            input.value=state.value
+            if(state.error){
+                errorKsg.style.display="block"
+            }else{
+                errorKsg.style.display="none"
+            }
+        }
+        input.addEventListener('input',function () {  
+            console.log(this.value);
+            if(this.value.length<=10){
+                setState({
+                    value:this.value,
+                    error:false
+                })
+            }else{
+                setState({
+                    error:true
+                })
+            }
+        })
+        render();
+    </script>
+</body>
+</html>

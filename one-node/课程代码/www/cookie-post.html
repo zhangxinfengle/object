@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="ajax.js"></script>
+</head>
+<script type="text/javascript">
+    window.onload=function(){
+        var oBtn=document.getElementById('login');
+        var oReg=document.getElementById('reg');
+        var oUser=document.getElementById('user');
+        var oPass=document.getElementById('pass');
+          oBtn.index='login';
+          oReg.index='reg';
+
+        oBtn.onclick=oReg.onclick=function(){
+            var _this=this;
+            ajax({
+                url:'/sub',
+                type:'post',
+                data:{act:_this.index,user:oUser.value,pass:oPass.value},
+                success:function(str){
+                    console.log(str);
+                    console.log(str.ok);
+                    var json=eval('('+str+')');
+                    alert(json.mag);
+                    if(json.ok){
+                        window.location.href="main.html"
+                    }
+                },
+                error:function(){
+                    console.log('通信失败');
+                }
+            })
+        }
+    }
+</script>
+<body>
+
+User: <input type="text" id="user"><br>
+Pass: <input type="password" id="pass"><br>
+<input type="button" value="登陆" id="login">
+<input type="button" value="注册" id="reg">
+
+
+
+</body>

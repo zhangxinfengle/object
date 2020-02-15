@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var linkedList=function(){
+        var head=null;
+        var length=0;
+        var Node=function (element) {
+            this.element=element;
+            this.next=null;
+        };
+        //链表接收数据
+
+        this.append=function(element) {
+            var node=new Node(element);
+
+          if(head==null){
+              head=node
+          }else{
+              var current=head;
+                    while (current.next) {
+                        current=current.next;
+                    }
+                    current.next=node;
+                    length++}};
+
+                   //链表的某一个位置添加元素
+        this.insert=function(position,element){
+            if(position>-1&&position<length){
+                var node=new Node(element);
+                     if(position==0){
+                         var current=head;
+                               head=node;
+                                current.next=current;
+
+                              }else{
+
+                         var previous=null;
+                         var index=0;
+                         var current=head;
+
+                     while (index<position) {
+                       previous=current;
+                       current=current.next;
+                       index++
+                    }
+                              previous.next=node;
+                               node.next=current;
+                }
+                           length++
+
+            }
+
+        };
+        this.removeAt=function(position) {
+            if (position > -1 && position < length) {
+                if (position == 0) {
+                    var current = head;
+                    head = current.next;
+                }
+                else {
+                    var previous = null;
+                    var current = head;
+                    var index = 0;
+                    while (index < position) {
+                        previous = current;
+                        current = current.next;
+                        index++
+
+                    }
+                    previous.next = current.next
+                }
+                length--;
+                return current;
+
+            }
+            return null
+
+        };
+        this.indexof=function (element) {
+        var current=head;
+        var index=0;
+          while (current) {
+
+              if(current.element==element)
+          {
+              return  index
+          }
+          index++;
+          current=current.next}
+          return -1
+        };
+        this.remove=function(element){
+            return this.removeAt(this.indexof(element))
+        };
+
+
+        this.getHead=function () {
+            return head
+        };
+        this.Isempty=function(){
+            return length==0;
+        }
+        this.size=function(){
+            return length;
+        }
+
+    };
+
+    var l=new linkedList();
+
+ l.append(1);
+ l.append(2);
+ l.append(3);
+ l.append(4);
+ l.insert(1,10);
+
+
+    console.log(l.getHead())
+
+
+</script>
+
+
+
+
+</body>
+</html>

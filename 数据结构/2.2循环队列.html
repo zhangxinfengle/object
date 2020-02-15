@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Queue () {
+    var items = []
+
+    /**
+     * 入列
+     * @param el
+     */
+    this.enqueue = function (el) {
+      items.push(el)
+    }
+
+    /**
+     * 出列
+     * @returns {*}
+     */
+    this.dequeue = function () {
+      return items.shift()
+    }
+
+    /**
+     * 查看队列头
+     * @returns {*}
+     */
+    this.front = function () {
+      return items[0]
+    }
+
+    /**
+     * 查看队列是否为空
+     * @returns {*}
+     */
+    this.isEmpty = function () {
+      return items.length === 0
+    }
+
+    /**
+     * 查看队列大小
+     * @returns {*}
+     */
+    this.size = function () {
+      return items.length
+    }
+
+    /**
+     * 获取当前队列的元素
+     * @returns {Array}
+     */
+    this.getItems = function () {
+      return items
+    }
+  }
+
+  var names = ['a', 'b', 'c', 'd', 'e', 'f']
+
+  function chuanhua (names, number) {
+    var q = new Queue()
+    for (var i = 0; i < names.length; i++) {
+      q.enqueue(names[i])
+    }
+    while (q.size() > 1) {
+      for (var j = 0; j < number - 1; j++) {
+        q.enqueue(q.dequeue())
+      }
+      var taotai = q.dequeue()
+      console.log('被淘汰的是' + taotai)
+    }
+    console.log(q.dequeue() + '胜出')
+  }
+</script>
+</body>
+</html>

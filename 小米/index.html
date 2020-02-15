@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/xiaomi.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/xiaomi.css" />
+	</head>
+
+	<body>
+		<div class="site-bn-bar-link"></div>
+		<div class="site-topbar">
+			<div class="container">
+				<div class="topbar-nav">
+					<a href="" class="top-link">小米商城</a><span class="sep">|</span>
+					<a href="" class="top-link">MIUI</a><span class="sep">|</span>
+					<a href="" class="top-link">IoT</a><span class="sep">|</span>
+					<a href="" class="top-link">云服务</a><span class="sep">|</span>
+					<a href="" class="top-link">金融</a><span class="sep">|</span>
+					<a href="" class="top-link">有品</a><span class="sep">|</span>
+					<a href="" class="top-link">小爱开放平台</a><span class="sep">|</span>
+					<a href="" class="top-link">政企服务</a><span class="sep">|</span>
+					<a href="" class="top-link">Select Region</a>
+				</div>
+				<div class="topbar-cart" id="J_miniCartTrigger">
+					<a href="" class="cart-mini" id="J_miniCartBtn">
+						<i class="iconfont"></i>购物车<span class="cart-mini-num J_cartNum">（0）</span>
+					</a>
+					<div class="cart-menu" id="J_miniCartMenu">
+						<div class="loading">
+							购物车中还没有商品，赶紧选购吧！
+						</div>
+					</div>
+				</div>
+				<div class="topbar-info" id="J_userInfo">
+					<a href="" class="top-link">登录</a><span class="sep">|</span>
+					<a href="" class="top-link">注册</a><span class="sep">|</span>
+					<span class="message"><a href="">消息通知</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="site-header">
+			<div class="container">
+				<div class="header-logo"></div>
+				<div class="header-nav">
+					<ul class="nav-list J_navMainList clearfix">
+						<li id="J_navCategory" class="nav-category"></li>
+						<li class="nav-item" data-index='0'>
+							<a href="" class="link">
+								<span class="text">小米手机</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='1'>
+							<a href="" class="link">
+								<span class="text">红米</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='2'>
+							<a href="" class="link">
+								<span class="text">电视</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='3'>
+							<a href="" class="link">
+								<span class="text">笔记本</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='4'>
+							<a href="" class="link">
+								<span class="text">空调</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='5'>
+							<a href="" class="link">
+								<span class="text">新品</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='6'>
+							<a href="" class="link">
+								<span class="text">路由器</span>
+							</a>
+						</li>
+						<li class="nav-item" data-index='7'>
+							<a href="" class="link">
+								<span class="text">智能硬件</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="link">
+								<span class="text">服务</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="" class="link">
+								<span class="text">社区</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-search">
+					<form action="https://www.baidu.com/s" target="_self" method="get" class="search">
+						<input type="text" name="wd" class="search-text"><input type="submit" value="" class="search-button iconfont"></input>
+						<div class="hotsearch">
+							<a href="">小米8</a>
+							<a href="">小米MIX 2s</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="J_navMenu" class="header-nav-menu">
+				<div class="container">
+					<ul class="children-list clearfix">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米7 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+
+					<ul class="children-list">
+						<li class="first">
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+							<div class="flags">
+								<div class="flag">新品</div>
+							</div>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+						<li>
+							<div class="figure figure-thumb">
+								<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/6pro320-220.png" / width="160" height="110"></a>
+							</div>
+							<div class="title">
+								<a href="">红米6 Pro</a>
+							</div>
+							<p class="price">999元起</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="home-hero-container container">
+			<div class="home-hero">
+				<div class="wrap">
+					<ul class="left-list">
+						<li class="left-item">
+							<a href="" class="left-link">手机 电话卡
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">电视 盒子
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">笔记本 平板
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">家电 插线板
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">出行 穿戴
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">智能 路由器
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">电源 配件
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">健康 儿童
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+
+							</div>
+						</li>
+						<li class="left-item">
+							<a href="" class="left-link">耳机 音箱
+								<i class="iconfont"></i>
+							</a>
+
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+
+						<li class="left-item">
+							<a href="" class="left-link">生活 箱包
+								<i class="iconfont"></i>
+							</a>
+							<div class="item-include">
+								<ul>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+									<li>
+										<a href=""><img src="//i1.mifile.cn/f/i/g/2015/cn-index/qingchun-80.png?width=80&height=80" height="40" width="40"><span>小米8 青春版</span></a>
+									</li>
+
+								</ul>
+
+							</div>
+						</li>
+					</ul>
+					<div class="loop" id="loop">
+						<ul class="img_list">
+							<li class="img_item active"><img src="//i1.mifile.cn/a4/xmad_15390566279642_JIicR.jpg" /></li>
+							<li class="img_item"><img src="//i1.mifile.cn/a4/xmad_15378467692556_lnrbU.jpg" /></li>
+							<li class="img_item"><img src="//i1.mifile.cn/a4/xmad_15332803104112_LtKUd.jpg" /></li>
+							<li class="img_item"><img src="//i1.mifile.cn/a4/xmad_15338982677936_eQTJk.jpg" /></li>
+							<li class="img_item"><img src="//i1.mifile.cn/a4/xmad_15393231809587_MsJlx.jpg" /></li>
+						</ul>
+						<button type="button" id="left" class="btn"></button>
+						<button type="button" id="right" class="btn"></button>
+						<ul class="point_list">
+							<li class="point change" data-index='0'></li>
+							<li class="point" data-index='1'></li>
+							<li class="point" data-index='2'></li>
+							<li class="point" data-index='3'></li>
+							<li class="point" data-index='4'></li>
+						</ul>
+					</div>
+				</div>
+				<div class="home-hero-sub row">
+					<div class="span4">
+						<ul class="home-channel-list clearfix">
+							<li class="exposure top left">
+								<a href="">
+									<i class="iconfont"></i>选购手机
+								</a>
+							</li>
+							<li class="exposure top">
+								<a href="">
+									<i class="iconfont"></i>企业团购
+								</a>
+							</li>
+							<li class="exposure top">
+								<a href="">
+									<i class="iconfont"></i>F码通道
+								</a>
+							</li>
+							<li class="exposure left">
+								<a href="">
+									<i class="iconfont"></i>米粉卡
+								</a>
+							</li>
+							<li class="exposure ">
+								<a href="">
+									<i class="iconfont"></i>以旧换新
+								</a>
+							</li>
+							<li class="exposure ">
+								<a href="">
+									<i class="iconfont"></i>话费充值
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="span16" id="J_homePromo">
+						<ul class="home-promo-list clearfix">
+							<li class="first">
+								<a href=""><img src="//i1.mifile.cn/a4/xmad_15382347809011_iElHK.jpg" /></a>
+							</li>
+							<li>
+								<a href=""><img src="//i1.mifile.cn/a4/xmad_15382348153503_PhHON.jpg" /></a>
+							</li>
+							<li>
+								<a href=""><img src="//i1.mifile.cn/a4/xmad_15166223451193_skuUX.jpg" /></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="xm-flashPurchase xm-carousel-container">
+				<div class="xm-plain-box">
+					<div class="box-hd">
+						<h2 class="title">小米闪购</h2>
+						<button type="button" class="iconfont btn2" id="left2"></button>
+						<button type="button" class="iconfont btn2 active" id="right2"></button>
+					</div>
+					<div class="box-bd">
+						<div class="xm-carousel-list goods-list rainbow-list clearfix J_flashPurchaseList">
+							<ul class="xm-flashPurchase-countdown">
+								<li class="rainbow-item-4 J_flashPurchaseInfo">
+									<div class="time-title J_falshRound">20:00 场</div>
+									<img src="//i1.mifile.cn/f/i/2018/mihome/flashpurchase.png" />
+									<div class="sub J_falshDesc">距离结束还有</div>
+									<div class="countdown clearfix J_falshTime">
+
+									</div>
+								</li>
+							</ul>
+
+							<div class="wrap2">
+								<ul class="list" id="list2">
+									<li class="item" style="border-top:solid 1px rgb(255,172,19)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">小米5X 红色版 4GB+64GB</p>
+										<p class="sec">变焦双摄，轻薄全金属 </p>
+										<p class="thi"><span>1299 元</span>&nbsp;<del>1499元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(131,196,78)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">小米5X 4GB+64GB 黑色</p>
+										<p class="sec">变焦双摄，轻薄全金属</p>
+										<p class="thi"><span>1299 元</span>&nbsp;<del>1499元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(33,150,243)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">小米5X 4GB+64GB 金色</p>
+										<p class="sec">变焦双摄，轻薄全金属 </p>
+										<p class="thi"><span>1299 元</span>&nbsp;<del>1499元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(229,57,53)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">红米5 2+16GB 移动4G+版 黑色</p>
+										<p class="sec">千元全面屏，前置柔光自拍</p>
+										<p class="thi"><span>739 元</span>&nbsp;<del>799元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(0,192,165)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">红米5 2+16GB 移动4G+版 金色</p>
+										<p class="sec">千元全面屏，前置柔光自拍</p>
+										<p class="thi"><span>739 元</span>&nbsp;<del>799元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(255,172,19)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">红米5 2+16GB 移动4G+版 玫瑰金</p>
+										<p class="sec">千元全面屏，前置柔光自拍</p>
+										<p class="thi"><span>739 元</span>&nbsp;<del>799元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(131,196,78)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">小米笔记本Air 13 i7 8G 256G 2G独显 银色</p>
+										<p class="sec">轻薄全金属，超长续航 </p>
+										<p class="thi"><span>5599 元</span>&nbsp;<del>5999元</del></p>
+									</li>
+									<li class="item" style="border-top:solid 1px rgb(33,150,243)"><img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" />
+										<p class="fir">小米笔记本Pro 15 i7 16G</p>
+										<p class="sec">全新第八代处理器 </p>
+										<p class="thi"><span>6799 元</span>&nbsp;<del>6999元</del></p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--结束闪购-->
+			<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-hero is-visible">
+				<img src="//i1.mifile.cn/a4/xmad_15283599920813_VWpSg.jpg" width="1226" />
+			</div>
+		</div>
+		<div class="page-main home-main">
+			<div class="container">
+				<div id="phone" class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">手机</h2>
+						<div class="more J_brickNav">
+							<a href="" class="more-link">查看全部
+								<i class="iconfont"></i>
+							</a>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-l">
+										<a href=""><img src="//i1.mifile.cn/a4/xmad_15323220713837_GLBVX.jpg" /></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<ul class="brick-list clearfix">
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+									<li class="brick-item brick-item-m brick-item-m-2">
+										<div class="figure figure-img">
+											<a href="" class="exposure">
+												<img src="//i1.mifile.cn/a1/pms_1537323963.1278763!220x220.jpg" width="160" height="160" />
+											</a>
+										</div>
+										<h3 class="title"><a href="">小米8 青春版 4GB+64GB</a></h3>
+										<p class="desc">潮流镜面渐变色，2400万自拍旗舰</p>
+										<p class="price"><span class="num">1399</span>元</p>
+										<div class="flag flag-new">新品</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+			</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+				<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15232433421155_vCzhJ.jpg"/></a>
+									</li>
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<div id="homeelec-content" class="tab-container">
+									<ul class="brick-list tab-content clearfix tab-content-active J_recommendActive">
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+												<div class="review-wrapper">
+													<a href=""><span class="review">服务周到热情，效率高，值得点赞！</span>
+														<span class="author"> 来自于 72706978 的评价</span>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80" height="80"/></a>
+												<h3 class="title"><a href="" class="exposure">小米净水器（厨下式）</a></h3>
+												<p class="price"><span class="num">1999</span>元  </p>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-more">
+												<a href=""><i class="iconfont"></i></a>
+											</div>
+											<a href="" class="more">浏览更多<small>热门</small></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+				<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15232433421155_vCzhJ.jpg"/></a>
+									</li>
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<div id="homeelec-content" class="tab-container">
+									<ul class="brick-list tab-content clearfix tab-content-active J_recommendActive">
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+												<div class="review-wrapper">
+													<a href=""><span class="review">服务周到热情，效率高，值得点赞！</span>
+														<span class="author"> 来自于 72706978 的评价</span>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80" height="80"/></a>
+												<h3 class="title"><a href="" class="exposure">小米净水器（厨下式）</a></h3>
+												<p class="price"><span class="num">1999</span>元  </p>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-more">
+												<a href=""><i class="iconfont"></i></a>
+											</div>
+											<a href="" class="more">浏览更多<small>热门</small></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+				<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15232433421155_vCzhJ.jpg"/></a>
+									</li>
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<div id="homeelec-content" class="tab-container">
+									<ul class="brick-list tab-content clearfix tab-content-active J_recommendActive">
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+												<div class="review-wrapper">
+													<a href=""><span class="review">服务周到热情，效率高，值得点赞！</span>
+														<span class="author"> 来自于 72706978 的评价</span>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80" height="80"/></a>
+												<h3 class="title"><a href="" class="exposure">小米净水器（厨下式）</a></h3>
+												<p class="price"><span class="num">1999</span>元  </p>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-more">
+												<a href=""><i class="iconfont"></i></a>
+											</div>
+											<a href="" class="more">浏览更多<small>热门</small></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+				<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15232433421155_vCzhJ.jpg"/></a>
+									</li>
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<div id="homeelec-content" class="tab-container">
+									<ul class="brick-list tab-content clearfix tab-content-active J_recommendActive">
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+												<div class="review-wrapper">
+													<a href=""><span class="review">服务周到热情，效率高，值得点赞！</span>
+														<span class="author"> 来自于 72706978 的评价</span>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80" height="80"/></a>
+												<h3 class="title"><a href="" class="exposure">小米净水器（厨下式）</a></h3>
+												<p class="price"><span class="num">1999</span>元  </p>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-more">
+												<a href=""><i class="iconfont"></i></a>
+											</div>
+											<a href="" class="more">浏览更多<small>热门</small></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+				<div class="home-brick-box home-brick-row-2-box xm-plain-box J_itemBox J_brickBox no-comment-total is-visible loaded">
+					<div class="box-hd">
+						<h2 class="title">家电</h2>
+						<div class="more J_brickNav">
+							<ul class="tab-list J_brickTabSwitch">
+								<li class="tab-active">热门</li>
+								<li>电视影音</li>
+								<li>电脑</li>
+								<li>家居</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-bd J_brickBd">
+						<div class="row">
+							<div class="span4 span-first">
+								<ul class="brick-promo-list clearfix">
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15232433421155_vCzhJ.jpg"/></a>
+									</li>
+									<li class="brick-item brick-item-m">
+										<a href="" class="exposure"><img src="//i1.mifile.cn/a4/xmad_15123939053142_dFlAw.jpg"/></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span16">
+								<div id="homeelec-content" class="tab-container">
+									<ul class="brick-list tab-content clearfix tab-content-active J_recommendActive">
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+												<div class="review-wrapper">
+													<a href=""><span class="review">服务周到热情，效率高，值得点赞！</span>
+														<span class="author"> 来自于 72706978 的评价</span>
+													</a>
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-m">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1524883847.49276938!220x220.jpg" width="150" height="150"/></a>
+												<h3 class="title"><a href="">小米电视4A 43英寸青春版</a></h3>
+												<p class="desc">全高清屏 / 人工智能语音</p>
+												<p class="price"><span class="num">1499</span>元  <del><span class="num">1699</span>元</del></p>
+												<div class="flag flag-saleoff">
+													    减 200 元  
+												</div>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-img">
+												<a href="" class="exposure"><img src="//i1.mifile.cn/a1/pms_1521634907.16181074!220x220.jpg"width="80" height="80"/></a>
+												<h3 class="title"><a href="" class="exposure">小米净水器（厨下式）</a></h3>
+												<p class="price"><span class="num">1999</span>元  </p>
+											</div>
+										</li>
+										<li class="brick-item brick-item-s">
+											<div class="figure figure-more">
+												<a href=""><i class="iconfont"></i></a>
+											</div>
+											<a href="" class="more">浏览更多<small>热门</small></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="J_itemBox J_homeBanner home-banner-box home-banner-box-brick is-visible">
+					<a href=""><img src="//i1.mifile.cn/a4/xmad_15396068838407_YtAfi.jpg" width="1226" /></a>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

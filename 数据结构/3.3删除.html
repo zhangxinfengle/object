@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Node (element) {
+    this.element = element
+    this.next = null
+  }
+
+  function LList () {
+    this.head = new Node('head')
+    this.find = find
+    this.insert = insert
+    this.display = display
+    this.findPrevious = findPrevious
+    this.remove = remove
+  }
+
+  /**
+   * 找到待删除节点前面的节点
+   * @param item
+   * @returns {Node|HTMLHeadElement}
+   */
+  function findPrevious (item) {
+    var currNode = this.head
+    while (!(currNode.next == null) &&
+    (currNode.next.element != item)) {
+      currNode = currNode.next
+    }
+    return currNode
+  }
+
+  /**
+   * 删除节点
+   * @param item
+   */
+  function remove (item) {
+    var prevNode = this.findPrevious(item)
+    if (!(prevNode.next == null)) {
+      prevNode.next = prevNode.next.next
+    }
+  }
+</script>
+</body>
+</html>

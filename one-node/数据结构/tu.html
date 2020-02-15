@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Stack=function () {
+        var item=[];
+        this.push=function (element) {
+            return item.push(element)
+        };
+        this.pop=function () {
+            return item.pop()
+        };
+        this.peek=function(){
+            return item[0]
+        };
+        this.getItems=function () {
+            return item
+        };
+        this.Isempty=function () {
+            return item.length==0
+        }
+    };
+    var Queue=function() {
+        var item = [];
+        this.enqueue = function (element) {
+            return item.push(element)
+        };
+        this.dequeue = function ()
+        {
+            return item.shift();
+        };
+        this.size=function(){
+            return item.length;
+        };
+        this.font=function(){
+            return item[0];
+        };
+        this.Isempty=function(){
+            return item.length===0
+        }
+    };
+    var Grap=function(){
+        var vertices=[];//储存定点；
+        var adjList={};//边;
+        this.addVertex=function (v) {
+            vertices.push(v);
+            adjList[v]=[];
+        };
+        //添加边
+   this.addEge=function (a,b) {
+       adjList[a].push(b);
+       adjList[b].push(a);
+   };
+   this.print=function () {
+       var s='\n';
+       for(var i=0;i<vertices.length;i++){
+           var m=vertices[i];
+
+           s+=m+'=>';
+           var bian=adjList[m];
+           for (var j=0;j<bian.length;j++){
+               s+=bian[j]
+           }
+           s+='\n'
+       }
+       console.log(s);
+   };
+   var intColor=function () {
+       var  color={};
+       for(var i=0;i<vertices.length;i++){
+           color[vertices[i]]='white'
+       }
+      return color
+
+   };
+//广度遍历
+this.bsf=function (v,callback) {
+
+        var color=intColor();
+        var que=new Queue();
+        que.enqueue(v);
+        var d={};
+        var pred=[];
+        for(var i=0;i<vertices.length;i++){
+            d[vertices[i]]=0;
+            pred[vertices[i]]=null
+
+        }
+    while(!que.Isempty()){
+            var now=que.dequeue();
+            var bian=adjList[now];
+            for(var i=0;i<bian.length;i++){
+
+              var m=bian[i];
+
+              if(color[m]==='white'){
+                  pred[m]=now;
+                  d[m]=d[now]+1
+                  color[m]='gray';
+                  que.enqueue(m);
+              }
+            }
+            color[now]='black';
+
+
+            if(callback){
+
+                callback(now)
+            }
+        }
+        return { pred:pred,d:d}
+};
+//深度优先遍历
+
+
+        var dfsVisit=function (v,color,callback) {
+                 color[v]='gray';
+                 var m=adjList[v];
+                 for(var i=0;i<m.length;i++){
+                     var w=m[i];
+                     if(color[w]==='white'){
+                         dfsVisit(w,color,callback)
+                     }
+
+                 }
+                 color[v]='black';
+                 if(callback){
+                     callback(v)
+                 }
+
+             };
+             this.dfs=function (v,callback) {
+                 var color=intColor();
+
+                 dfsVisit(v,color,callback)
+
+
+
+             }
+
+
+    };
+
+    var s=new Grap();
+     s.addVertex('A');
+     s.addVertex('B');
+     s.addVertex('C');
+     s.addVertex('D');
+     s.addVertex('E');
+     s.addVertex('F');
+     s.addEge('A','B');
+    s.addEge('A','C');
+     s.addEge('A','D');
+     s.addEge('C','D');
+    s.addEge('E','B');
+    s.addEge('F','B');
+
+    var g=s.bsf('A');
+    console.log(g);
+    var zuiduan=function(from,to){
+        var v=to;
+      var path=new Stack();
+        while (v!==from){
+            path.push(v);
+            v=g.pred[v]
+
+        }
+        path.push(v);
+
+        var str='';
+        while(!path.Isempty()){
+
+            str+=path.pop()+'-'
+
+        }
+        str=str.slice(0,length-1);
+        console.log(str)
+
+    };
+    zuiduan('A','F');
+    s.dfs('A',function (v) {
+        console.log(v)
+    })
+
+
+    
+
+</script>
+
+</body>
+</html>

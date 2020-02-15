@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+var Set2=function () {
+    var items=[];
+
+    this.has=function (value) {
+        return items.hasOwnProperty(value)
+    };
+    this.add=function(value){
+        if(!this.has(value)){
+            items[value]=value;
+            return value
+        }
+        return false
+    };
+    this.remove=function (value) {
+       if(this.has(value)){
+           delete items[value];
+           return true
+       }else{
+           return false
+       }
+    };
+    this.size=function(){
+
+        return Object.keys(items).length
+    };
+    this.getItem=function(){
+        return items
+    };
+    this.clear=function(){
+        items={}
+    };
+    this.value=function(){
+        var values=[];
+        for(var i in items){
+            if (items.hasOwnProperty(i)) {
+                values.push(i)
+            }
+            
+        }
+        return values
+    };
+    // 并集
+    this.union=function (otherSet) {
+        var result=new Set2();
+        var arr=this.value();
+        for(var i=0;i<arr.length;i++){
+            result.add(arr[i])
+        }
+        arr=otherSet.value();
+        for(var i=0;i<arr.length;i++){
+            result.add(arr[i])
+        }
+        return result
+
+    };
+    //交集
+    this.intersection=function (otherSet) {
+        var result=new Set2();
+        var arr=this.value();
+        for(var i=0;i<arr.length;i++){
+            if(otherSet.has(arr[i])){
+                result.add(arr[i])
+            }
+        }
+        return result
+        
+    };
+    this.difference=function (otherSet) {
+        var result=new Set2();
+        var arr=this.value();
+        for(var i=0;i<arr.length;i++){
+            if(otherSet.has(arr[i])){
+
+            }else{
+                result.add(arr[i])
+            }
+        }
+        return result
+
+    }
+
+
+
+};
+
+var a=new Set2();
+a.add(1);
+a.add(2);
+ a.add(3) ;
+
+
+var b=new Set2();
+
+b.add(2);
+b.add(3) ;
+b.add(4);
+console.log(a.value())
+console.log(b.value())
+
+var s=a.intersection(b)
+console.log(s.value())
+console.log(a.difference(b).value())
+console.log(b.difference(a).value())
+
+
+   //console.log(c.value())
+  /*console.log(s.size());
+   console.log(s.getItem())
+*/
+var a1=new Set([1,2,3])
+var b1=new Set([2,3,4])
+   var union=new Set([...a1,...b1]);
+    var intersect=new Set([...a1].filter(x=>b1.has(x)))
+    var different=new Set([...a1].filter(x=>!b1.has(x)))
+var set=new Set()
+var obj={name:'zhouge'}
+set.add(obj);
+    obj=null;
+    console.log(obj)
+    console.log(set)
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+doctype
+html
+    head
+        meta(charset="utf-8",title="title")
+        title jade模板引擎
+    script.
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var a = 12
+        }
+    body
+        div&attributes({"title": "main", "class": "aaa"})
+            ul
+                li(class=arr)
+                li(class=arr)
+                li(class=arr,class="fff")
+                li(class=arr)
+        div
+            span=nameA
+            span #{nameB}
+        div!=content
+        div
+            -for(var i=0;i<3;i++)
+            div(style={"background": "green"}) #{i}
+        div
+            -var a=1
+            if a == 1
+                div(style={"background": "pink"}) 1
+            else
+                div(style={"background": "blue"}) 2
+        div
+            -var a=3
+            case a
+                when 0
+                    div 1
+                when 1
+                    div 2
+                when 2
+                    div 3
+                default
+                    div 4

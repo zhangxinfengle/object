@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //二叉树搜索法
+
+      var Tree=function () {
+            var root=null;
+          var Node=function (value) {
+              this.value=value;
+              this.left=null;
+              this.right=null
+          };
+          //插入节点
+          var insertNode=function (node,newnode) {
+              if(newnode.value>node.value){
+                          if(node.right==null){
+                              node.right=newnode
+                          }else {
+                              insertNode(node.right,newnode)
+                          }
+                      }
+                      else if(newnode.value<node.value){
+                     if(node.left==null){
+                      node.left=newnode;
+                  }else {
+                      insertNode(node.left,newnode)
+                  }}
+          };
+
+          this.insert=function (value) {
+
+              var newnode=new Node(value);
+              if(root==null){
+                   root=newnode
+              }else {
+
+                  insertNode(root,newnode)
+
+              }
+
+          };
+          var traverse=function (node,callback) {
+
+              if(node==null) return;
+              //callback(node.value);  //8 2 3 9   前序遍历
+              traverse(node.left,callback);
+            //callback(node.value);    //  2 3 8 9  中序遍历
+              traverse(node.right,callback);
+              callback(node.value)//3 2 9 8    后序遍历    查找某个游戏文件 这种方式最好
+          };
+          this.traverse=function (callback) {
+              traverse(root,callback)
+          };
+          var min=function (node) {
+              if(node==null) return null;
+
+              while(node&&node.left){
+                  node=node.left
+              }
+              return node.value
+
+
+          };
+        this.min=function () {
+            return min(root)
+        };
+
+          var max=function (node) {
+              if(node==null) return null;
+
+              while(node&&node.right){
+                  node=node.right
+              }
+              return node.value
+
+
+          };
+          this.max=function () {
+              return max(root)
+          };
+          //删除
+          var findMinNode=function (node) {
+              if(node==null) return ;
+              while(node&&node.left){
+                  node=node.left
+              }
+              return node
+
+          };
+
+          var removeNode=function (node,value) {
+              if(node==null) return null;
+              if(value>node.value){
+                  node.right=removeNode(node.right,value);
+                  return node
+              }else if(value<node.value){
+                  node.left=removeNode(node.left,value);
+                  return node
+              }else{
+                  //value==node.value
+                  //删除过程
+                  if(node.left==null&&node.right==null){
+                      //此为叶节点
+                      return null
+                  }
+                  //只有一个子节点
+                  if(node.left&&node.right==null){
+                      return node.left
+                  }else if(node.left==null&&node.right){
+                      return node.rigth
+                  }
+                  //有两个子节点  寻找右侧子树的最小节点
+                  var axu=findMinNode(node.right);
+                  node.value=axu.value;
+                  node.right=removeNode(node.right,axu.value);
+                    return node;
+              }
+          };
+
+
+
+          this.remove=function (value) {
+             root=removeNode(root,value);
+             return root;
+          };
+
+
+          this.getRoot=function () {
+              return root
+          }
+
+
+
+      };
+
+
+    var t=new Tree();
+    t.insert(11);
+    t.insert(8);
+    t.insert(4);
+     t.insert(9);
+  t.insert(3);
+  t.insert(5);
+
+   var  print=function(value){
+         console.log('value-',value)
+     };
+/*console.log(t.min());
+console.log(t.remove(4));
+console.log(t.traverse(print))*/
+  //  console.log(t.getRoot())
+
+</script>
+
+
+
+</body>
+</html>

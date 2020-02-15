@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Node (element) {
+    this.element = element
+    this.next = null
+  }
+
+  function LList () {
+    this.head = new Node('head')
+    this.find = find
+    this.insert = insert
+    this.display = display
+    this.findPrevious = findPrevious
+    this.remove = remove
+  }
+
+  function find (item) {
+    var currNode = this.head
+    while (currNode.element != item) {
+      currNode = currNode.next
+    }
+    return currNode
+  }
+
+  /**
+   * 插入元素
+   * @param newElement
+   * @param item
+   */
+  function insert (newElement, item) {
+    var newNode = new Node(newElement)
+    var current = this.find(item)
+    newNode.next = current.next
+    current.next = newNode
+  }
+
+  /**
+   * 显示元素
+   */
+  function display () {
+    var currNode = this.head
+    while (!(currNode.next == null)) {
+      console.log(currNode.next.element)
+      currNode = currNode.next
+    }
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+  margin: 0;padding: 0;
+}
+.box-wrap{
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  float: left;
+}
+.history{
+  width: 200px;
+  height: 300px;
+  float: left;
+  margin-left: 20px;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  border: 1px solid gray;
+  float: left;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 50px;
+  line-height: 100px;
+  text-align: center;
+  font-weight:700;
+}
